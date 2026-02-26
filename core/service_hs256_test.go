@@ -16,7 +16,7 @@ func testConfig() Config {
 	}
 }
 
-func TestGenerateAndVerifyAccess(t *testing.T) {
+func TestHS256_GenerateAndVerifyAccess(t *testing.T) {
 	cfg := testConfig()
 	svc, err := New(cfg)
 	if err != nil {
@@ -42,7 +42,7 @@ func TestGenerateAndVerifyAccess(t *testing.T) {
 	}
 }
 
-func TestRefresh(t *testing.T) {
+func TestHS256_Refresh(t *testing.T) {
 	cfg := testConfig()
 	svc, _ := New(cfg)
 
@@ -58,7 +58,7 @@ func TestRefresh(t *testing.T) {
 	}
 }
 
-func TestExpiredToken(t *testing.T) {
+func TestHS256_ExpiredToken(t *testing.T) {
 	cfg := testConfig()
 	cfg.AccessTTL = -1 * time.Minute
 
@@ -72,7 +72,7 @@ func TestExpiredToken(t *testing.T) {
 	}
 }
 
-func TestWrongSecret(t *testing.T) {
+func TestHS256_WrongSecret(t *testing.T) {
 	cfg := testConfig()
 	svc1, _ := New(cfg)
 
@@ -87,7 +87,7 @@ func TestWrongSecret(t *testing.T) {
 	}
 }
 
-func TestInvalidTokenType(t *testing.T) {
+func TestHS256_InvalidTokenType(t *testing.T) {
 	cfg := testConfig()
 	svc, _ := New(cfg)
 
