@@ -1,4 +1,4 @@
-package core
+package go_jwt
 
 import "github.com/golang-jwt/jwt/v5"
 

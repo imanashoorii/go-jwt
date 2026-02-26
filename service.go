@@ -1,6 +1,8 @@
-package core
+package go_jwt
 
-import "github.com/imanashoorii/go-jwt/core/internal"
+import (
+	"github.com/imanashoorii/go-jwt/internal"
+)
 
 type Service struct {
 	cfg       Config

@@ -1,4 +1,4 @@
-package core
+package go_jwt
 
 type TokenBundle struct {
 	AccessToken  string `json:"access_token"`
